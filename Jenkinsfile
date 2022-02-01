@@ -26,7 +26,9 @@ pipeline {
         stage("build image") {
             steps {
                     script {
-                        buildImage('159.65.85.180:8083/my-latest-app:3.0', '159.65.85.180:8083')
+                        buildImage('159.65.85.180:8083/my-latest-app:3.1')
+                        dockerLogin('159.65.85.180:8083')
+                        dockerPush('159.65.85.180:8083/my-latest-app:3.1')
                     }
                 }
             }
