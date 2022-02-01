@@ -26,7 +26,7 @@ pipeline {
         stage("build image") {
             steps {
                     script {
-                        buildImage()
+                        buildImage('159.65.85.180:8083/my-latest-app:1.0', '159.65.85.180:8083')
                     }
                 }
             }
